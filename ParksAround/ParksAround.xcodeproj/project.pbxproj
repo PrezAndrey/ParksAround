@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		555FC08C284FFDCB009B3277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC08B284FFDCB009B3277 /* AppDelegate.swift */; };
 		555FC08E284FFDCB009B3277 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC08D284FFDCB009B3277 /* SceneDelegate.swift */; };
-		555FC090284FFDCB009B3277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC08F284FFDCB009B3277 /* ViewController.swift */; };
 		555FC093284FFDCB009B3277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555FC091284FFDCB009B3277 /* Main.storyboard */; };
 		555FC095284FFDCD009B3277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555FC094284FFDCD009B3277 /* Assets.xcassets */; };
 		555FC098284FFDCD009B3277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555FC096284FFDCD009B3277 /* LaunchScreen.storyboard */; };
+		555FC0A028500075009B3277 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC09F28500075009B3277 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		555FC088284FFDCB009B3277 /* ParksAround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParksAround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555FC08B284FFDCB009B3277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555FC08D284FFDCB009B3277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		555FC08F284FFDCB009B3277 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		555FC092284FFDCB009B3277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		555FC094284FFDCD009B3277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555FC097284FFDCD009B3277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		555FC099284FFDCD009B3277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555FC09F28500075009B3277 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +58,45 @@
 			children = (
 				555FC08B284FFDCB009B3277 /* AppDelegate.swift */,
 				555FC08D284FFDCB009B3277 /* SceneDelegate.swift */,
-				555FC08F284FFDCB009B3277 /* ViewController.swift */,
-				555FC091284FFDCB009B3277 /* Main.storyboard */,
-				555FC094284FFDCD009B3277 /* Assets.xcassets */,
-				555FC096284FFDCD009B3277 /* LaunchScreen.storyboard */,
+				555FC0A2285000E6009B3277 /* Model */,
+				555FC0A3285000F2009B3277 /* View */,
+				555FC0A1285000D0009B3277 /* Controller */,
+				555FC0A428500147009B3277 /* Resources */,
 				555FC099284FFDCD009B3277 /* Info.plist */,
 			);
 			path = ParksAround;
+			sourceTree = "<group>";
+		};
+		555FC0A1285000D0009B3277 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				555FC09F28500075009B3277 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		555FC0A2285000E6009B3277 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		555FC0A3285000F2009B3277 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		555FC0A428500147009B3277 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				555FC091284FFDCB009B3277 /* Main.storyboard */,
+				555FC096284FFDCD009B3277 /* LaunchScreen.storyboard */,
+				555FC094284FFDCD009B3277 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555FC090284FFDCB009B3277 /* ViewController.swift in Sources */,
+				555FC0A028500075009B3277 /* MainViewController.swift in Sources */,
 				555FC08C284FFDCB009B3277 /* AppDelegate.swift in Sources */,
 				555FC08E284FFDCB009B3277 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +321,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5LT7XRVG2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParksAround/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +349,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5LT7XRVG2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ParksAround/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
