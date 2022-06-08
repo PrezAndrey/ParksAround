@@ -29,7 +29,9 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        
         cell?.textLabel?.text = parkNames[indexPath.row]
+        cell?.imageView?.image = UIImage(named: parkNames[indexPath.row])
         
         return cell ?? UITableViewCell()
     }

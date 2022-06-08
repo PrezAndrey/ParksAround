@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Парк возле главного здания МГУ им. Ломоносова@1x.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Парк возле главного здания МГУ им. Ломоносова@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Парк возле главного здания МГУ им. Ломоносова@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
