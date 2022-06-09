@@ -48,7 +48,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jci-SD-zPA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jci-SD-zPA">
                                             <rect key="frame" x="95" y="55" width="299" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="15" id="Ylh-Ac-Vna"/>
@@ -77,7 +77,7 @@
                                     <outlet property="imageOfPark" destination="c8x-Cj-seQ" id="SCi-nT-Nbv"/>
                                     <outlet property="locationLable" destination="tmY-IZ-qhL" id="8CW-gd-KXk"/>
                                     <outlet property="nameLable" destination="e5W-Q3-U2L" id="YqB-wd-TZB"/>
-                                    <outlet property="typeLable" destination="jci-SD-zPA" id="qxV-9c-SS2"/>
+                                    <outlet property="openTimeLable" destination="jci-SD-zPA" id="QLf-qI-yZp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
