@@ -28,12 +28,24 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ParkTableViewCell
         
-        cell?.textLabel?.text = parkNames[indexPath.row]
-        cell?.imageView?.image = UIImage(named: parkNames[indexPath.row])
+        cell.nameLable.text = parkNames[indexPath.row]
         
-        return cell ?? UITableViewCell()
+        cell.imageOfPark?.image = UIImage(named: parkNames[indexPath.row])
+        
+        cell.imageOfPark.layer.cornerRadius = cell.imageOfPark.frame.height / 2
+        
+         
+        cell.imageOfPark.clipsToBounds = true
+                
+        return cell
+    }
+    
+    // MARK: TableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
 
 }
