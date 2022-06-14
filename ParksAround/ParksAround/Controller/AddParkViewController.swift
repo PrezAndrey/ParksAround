@@ -12,17 +12,37 @@ class AddParkViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     
     @IBAction func didCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
     
+}
+
+
+// MARK: TextFieldDelegate
+extension AddParkViewController: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
+
+// MARK: TableViewDelegate
+extension AddParkViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            
+        } else {
+            view.endEditing(true)
+        }
+    }
 }
