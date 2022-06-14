@@ -9,6 +9,8 @@ import UIKit
 
 class AddParkViewController: UITableViewController {
 
+    @IBOutlet weak var imageOfPark: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +52,7 @@ extension AddParkViewController {
 
 
 // MARK: ImageUpload
-extension AddParkViewController {
+extension AddParkViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func uploadPictureAlert() {
         
@@ -78,10 +80,21 @@ extension AddParkViewController {
         
         if UIImagePickerController.isSourceTypeAvailable(source) {
             let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+             
             imagePicker.allowsEditing = true
             imagePicker.sourceType = source
             
             present(imagePicker, animated: true)
         }
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        imageOfPark.image = info[.editedImage] as? UIImage
+        imageOfPark.contentMode = .scaleAspectFill
+        imageOfPark.clipsToBounds = true
+        dismiss(animated: true)
     }
 }

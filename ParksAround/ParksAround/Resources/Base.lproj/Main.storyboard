@@ -255,6 +255,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="flD-nd-BQi"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageOfPark" destination="fd4-ZO-924" id="K1N-qN-3pf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v37-n6-53t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
