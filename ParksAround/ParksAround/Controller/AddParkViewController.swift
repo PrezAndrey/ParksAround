@@ -11,6 +11,9 @@ class AddParkViewController: UITableViewController {
 
     @IBOutlet weak var imageOfPark: UIImageView!
     
+    let photoIcon = UIImage(named: "photoIcon")
+    let cameraIcon = UIImage(named: "cameraIcon")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,10 +64,14 @@ extension AddParkViewController: UIImagePickerControllerDelegate, UINavigationCo
         let photo = UIAlertAction(title: "Photo", style: .default) { _ in
             self.chooseImagePicker(source: .photoLibrary)
         }
+        photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        photo.setValue(photoIcon, forKey: "image")
         
         let camera = UIAlertAction(title: "Camera", style: .default) { _ in
             self.chooseImagePicker(source: .camera)
         }
+        camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        camera.setValue(cameraIcon, forKey: "image")
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive)
         
