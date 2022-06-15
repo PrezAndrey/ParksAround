@@ -8,38 +8,73 @@
 import UIKit
 
 class AddParkViewController: UITableViewController {
-
+    
+    var newPark: Park?
+    var imageIsChanged = false
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     @IBOutlet weak var imageOfPark: UIImageView!
+    @IBOutlet weak var parkNameTF: UITextField!
+    @IBOutlet weak var parkLocationTF: UITextField!
+    @IBOutlet weak var workingHoursTF: UITextField!
     
     let photoIcon = UIImage(named: "photoIcon")
     let cameraIcon = UIImage(named: "cameraIcon")
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        saveButton.isEnabled = false
+        parkNameTF.addTarget(self, action: #selector(TFChanged), for: .editingChanged)
     }
 
     
+    
+    
+    
     @IBAction func didCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func saveNewPark() {
+        
+        var image: UIImage?
+        
+        if imageIsChanged {
+            image = imageOfPark.image
+        } else {
+            image = UIImage(named: "tree")
+        }
+        newPark = Park(name: parkNameTF.text!, image: image, parkImage: nil, location: parkLocationTF.text, openTime: workingHoursTF.text)
     }
 
     
 }
 
 
-// MARK: TextFieldDelegate
+// MARK: TextField Delegate
 extension AddParkViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
+    @objc private func TFChanged() {
+        if parkNameTF.text?.isEmpty == false {
+            saveButton.isEnabled = true
+        } else {
+            saveButton.isEnabled = false
+        }
+    }
 }
 
 
 
-// MARK: TableViewDelegate
+// MARK: TableView Delegate
 extension AddParkViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -54,7 +89,7 @@ extension AddParkViewController {
 
 
 
-// MARK: ImageUpload
+// MARK: Working with image
 extension AddParkViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func uploadPictureAlert() {
@@ -100,6 +135,7 @@ extension AddParkViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         imageOfPark.image = info[.editedImage] as? UIImage
+        imageIsChanged = true
         imageOfPark.contentMode = .scaleAspectFill
         imageOfPark.clipsToBounds = true
         dismiss(animated: true)

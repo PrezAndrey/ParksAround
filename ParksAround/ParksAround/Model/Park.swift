@@ -5,12 +5,14 @@
 //  Created by Андрей  on 09.06.2022.
 //
 
-import Foundation
+
+import UIKit
 
 struct Park {
     
     var name: String
-    var parkImage: String
-    var location: String
-    var openTime: String = "ежедневно, круглосуточно"
+    var image: UIImage?
+    var parkImage: String?
+    var location: String?
+    var openTime: String? = "ежедневно, круглосуточно"
 }

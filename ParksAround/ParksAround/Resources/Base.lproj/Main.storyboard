@@ -253,13 +253,22 @@
                                 <action selector="didCancel:" destination="V95-tU-kNg" id="vCc-tm-e5T"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="flD-nd-BQi"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="flD-nd-BQi">
+                            <connections>
+                                <segue destination="6mi-lc-nnW" kind="unwind" unwindAction="unwindSegue:" id="jiK-ix-1ep"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageOfPark" destination="fd4-ZO-924" id="K1N-qN-3pf"/>
+                        <outlet property="parkLocationTF" destination="i7r-Vh-y9w" id="F0b-CQ-0wF"/>
+                        <outlet property="parkNameTF" destination="rCb-hs-XGv" id="9oA-Ky-832"/>
+                        <outlet property="saveButton" destination="flD-nd-BQi" id="fX4-Lx-kUO"/>
+                        <outlet property="workingHoursTF" destination="60Q-h8-Ae8" id="nbe-g1-WVB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v37-n6-53t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6mi-lc-nnW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2760.8695652173915" y="166.74107142857142"/>
         </scene>

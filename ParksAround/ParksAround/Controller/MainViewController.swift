@@ -62,17 +62,22 @@ class MainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return parkNames.count
+        return parks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! ParkTableViewCell
         
-        cell.nameLable.text = parks[indexPath.row].name
+        let park = parks[indexPath.row]
+        cell.nameLable.text = park.name
+        if park.parkImage != nil {
+            cell.imageOfPark.image = UIImage(named: park.parkImage!)
+        } else {
+            cell.imageOfPark.image = park.image
+        }
         
-        cell.imageOfPark.image = UIImage(named: parks[indexPath.row].parkImage)
-        cell.locationLable.text = parks[indexPath.row].location
-        cell.openTimeLable.text = parks[indexPath.row].openTime
+        cell.locationLable.text = park.location
+        cell.openTimeLable.text = park.openTime
         
         cell.imageOfPark.layer.cornerRadius = cell.imageOfPark.frame.height / 2
         
@@ -87,6 +92,16 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
+    }
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        
+        guard let newParkVC = segue.source as? AddParkViewController else { return }
+        
+        newParkVC.saveNewPark()
+        parks.append(newParkVC.newPark!)
+        
+        tableView.reloadData()
     }
 
 }
