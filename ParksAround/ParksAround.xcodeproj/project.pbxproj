@@ -16,6 +16,7 @@
 		555FC0A7285239EE009B3277 /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC0A6285239EE009B3277 /* ParkTableViewCell.swift */; };
 		555FC0A928524DDB009B3277 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC0A828524DDB009B3277 /* Park.swift */; };
 		555FC0AB2857E2A1009B3277 /* AddParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC0AA2857E2A1009B3277 /* AddParkViewController.swift */; };
+		555FC0AD285BAC61009B3277 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555FC0AC285BAC61009B3277 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		555FC0A6285239EE009B3277 /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		555FC0A828524DDB009B3277 /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
 		555FC0AA2857E2A1009B3277 /* AddParkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParkViewController.swift; sourceTree = "<group>"; };
+		555FC0AC285BAC61009B3277 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ParksAround/Controller/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		555FC0A1285000D0009B3277 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				555FC0AC285BAC61009B3277 /* DetailViewController.swift */,
 				555FC09F28500075009B3277 /* MainViewController.swift */,
 				555FC0AA2857E2A1009B3277 /* AddParkViewController.swift */,
 			);
@@ -185,6 +188,7 @@
 				555FC08E284FFDCB009B3277 /* SceneDelegate.swift in Sources */,
 				555FC0A928524DDB009B3277 /* Park.swift in Sources */,
 				555FC0A7285239EE009B3277 /* ParkTableViewCell.swift in Sources */,
+				555FC0AD285BAC61009B3277 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
